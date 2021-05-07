@@ -7,13 +7,25 @@ YouTube: https://www.youtube.com/xEpsi
 
 '''
 
+# | OPTIONS |
+
+# Precision: (numbers after comma)
+precision=int(2)
+
+# Decoration type:
+decotype="-_"
+
+# Show raw percentage value:
+pvalue=False
+
 from random import randint as rndint
 from time import sleep
 from re import search as research
+
 def decorate():
-    print("===================")
+    print("===================".replace("=", decotype))
 def decorate2():
-    print("===================\n")
+    print("===================\n".replace("=", decotype))
 while True:
     try:
         rstest = int()
@@ -43,11 +55,13 @@ while True:
                 decorate2()
                 print("Your number (which was {}) appeared {} times out of {}.".format(yournumber, yournumbercount, inputrange))
                 a_number = minrange / maxrange
-                percentage = "{:.2%}".format(a_number)
+                percentage = "{:.{}%}".format(a_number, precision)
                 print("The odds of it appearing at least once were {}".format(percentage))
+                if pvalue=True:
+                    print("The raw percentage value is {}".format(a_number)
                 if yournumbercount > 0:
                     a_number = minrange / maxrange / yournumbercount
-                    percentage = "{:.2%}".format(a_number)
+                    percentage = "{:.{}%}".format(a_number, precision)
                     print("The odds of it appearing {} times were {}".format(yournumbercount, percentage))
         while True:
             answer = str(input('Run again? (y/n): '))
