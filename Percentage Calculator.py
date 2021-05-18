@@ -1,3 +1,12 @@
+"""
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+            Programmed by Epsi
+Discord: Epsi#0001 | dsc.bio/Epsi
+YouTube: https://www.youtube.com/xEpsi
+GitHub: https://github.com/xEpsi
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+"""
+
 #OPTIONS (replace False by True to activate) (if the option is a number, change it)
 #Invert the division if the total exceeds 100%:
 invert = True
@@ -20,15 +29,16 @@ while True:
         if invert == True:
             if num3 >= 1:
                 num3 = num1 / num2
-        percentage = "{:.{}%}".format(num3, num4)
+        percentage = "{:.{}%}".format(num3, num4) #Calculates the percentage
         print("Result: {}".format(percentage))
         if rawresult == True:
-            print("Raw result: {}".format(num3))
+            print("Raw result: {}".format(num3)) #The rawresult option needs to be on
     except ValueError:
-        print("Error: Please enter 2 whole numbers. You can then divide the result to make up for it.")
+        print("Error: Please enter 2 whole numbers. You can then divide the result to make up for it.") #Sometimes people just input numbers with commas and my
+                                                                                                        #program isn't advanced enough in order for it to work
         
     while True:
-        rep = str(input('Restart? (y/n): '))
+        rep = str(input('Restart? (y/n): ')) #Program restart code (the program is inside a while True loop so it just breaks when you say n)
         if rep in ('y', 'n'):
             print("-------------------------")
             break
