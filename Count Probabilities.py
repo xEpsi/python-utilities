@@ -3,6 +3,7 @@
             Programmed by Epsi
 Discord: Epsi#0001 | dsc.bio/Epsi
 YouTube: https://www.youtube.com/xEpsi
+GitHub: https://github.com/xEpsi
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 '''
