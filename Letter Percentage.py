@@ -1,11 +1,11 @@
-'''
+"""
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
             Programmed by Epsi
 Discord: Epsi#0001 | dsc.bio/Epsi
 YouTube: https://www.youtube.com/xEpsi
+GitHub: https://github.com/xEpsi
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-'''
+"""
 
 # If you know a way to make this non-case-sensitive please DM me on Discord
 
