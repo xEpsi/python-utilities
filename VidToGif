@@ -1,0 +1,40 @@
+#ENGLISH INSTRUCTIONS
+#Rename the video to clip.mp4 (it has to be mp4), and then put it in the same folder as the script.
+#Then, launch the script and wait until the console stops spamming and says Done!
+#                   External module needed: imageio
+
+#INSTRUCTIONS FR
+#Il faut renommer la vidéo clip.mp4 et la mettre dans le même dossier que le script
+#Ensuite lancez le script et attendez que la console arrête de spam et dise Done!
+#                   Il faut installer le module imageio pour que le programme marche. 
+#                   Pour l'installer, faites Windows+R, tapez cmd, puis tapez pip install imageio 
+#                   dans la fenêtre cmd. Voilà c'est tout.
+
+
+
+
+
+
+
+import imageio
+import os
+
+clip = os.path.abspath('clip.mp4')
+
+def gifMaker(inputPath, targetFormat):
+    outputPath = os.path.splitext(inputPath)[0] + targetFormat
+
+    print(f"converting {inputPath} \nto {outputPath}")
+
+    reader = imageio.get_reader(inputPath)
+    fps = reader.get_meta_data()['fps']
+
+    writer = imageio.get_writer(outputPath, fps=fps)
+
+    for frames in reader:
+        writer.append_data(frames)
+        print(f'Frame {frames}')
+    print("Done!")
+    writer.close()
+
+gifMaker(clip, '.gif')
